@@ -1,0 +1,112 @@
+import {StyleSheet, Dimensions} from 'react-native';
+import {COLORS, FONTS} from '../../constants';
+const {height, width} = Dimensions.get('window');
+export default StyleSheet.create({
+  container: {
+    backgroundColor: COLORS.white,
+    flex: 1,
+  },
+  fileicon: {
+    width: width * 0.06,
+    height: height * 0.028,
+    resizeMode: 'contain',
+    marginHorizontal: width * 0.04,
+  },
+  title: {
+    marginBottom: -3,
+    fontSize: width * 0.032,
+    ...FONTS.fiveHundred,
+    color: COLORS.black,
+  },
+  row: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderWidth: 1,
+    width: width,
+    borderColor: COLORS.gray10,
+    paddingVertical: height * 0.018,
+    marginTop: height * 0.02,
+  },
+
+  searchbox: {
+    height: height * 0.058,
+    width: width * 0.93,
+    marginTop: height * 0.01,
+    marginBottom: height * 0.02,
+    flexDirection: 'row',
+    alignItems: 'center',
+    borderRadius: 10,
+    backgroundColor: COLORS.white,
+    borderColor: COLORS.gray30,
+    alignSelf: 'center',
+    elevation: 4,
+    paddingHorizontal: width * 0.02,
+  },
+  search: {
+    height: height * 0.023,
+    width: width * 0.05,
+    marginHorizontal: width * 0.02,
+    resizeMode: 'stretch',
+    tintColor: COLORS.primary,
+  },
+  searchinput: {
+    width: width * 0.5,
+    ...FONTS.fourHundred,
+    fontSize: width * 0.034,
+    marginBottom: -3,
+    color: COLORS.black,
+  },
+  number: {
+    ...FONTS.fourHundred,
+    fontSize: width * 0.033,
+    marginBottom: -3,
+    color: COLORS.gray40,
+    borderRightWidth: 1,
+    borderColor: COLORS.gray40,
+    paddingRight: width * 0.02,
+  },
+  arrow: {
+    marginLeft: width * 0.015,
+    color: COLORS.black,
+  },
+  cross: {
+    marginHorizontal: width * 0.015,
+    tintColor: COLORS.black,
+    width: width * 0.05,
+    height: height * 0.024,
+  },
+  checkbox: {
+    width: width * 0.066,
+    height: width * 0.065,
+    borderWidth: 1,
+    borderColor: COLORS.gray30,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 3,
+    marginLeft: width * 0.04,
+  },
+  checkrow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  checktext: {
+    ...FONTS.fourHundred,
+    fontSize: width * 0.033,
+    marginBottom: -3,
+    color: COLORS.black,
+    marginLeft: width * 0.02,
+  },
+  heading: {
+    fontSize: width * 0.038,
+    ...FONTS.sixHundred,
+    color: COLORS.black,
+    marginBottom: -4,
+    marginVertical: height * 0.01,
+  },
+  subText: {
+    fontSize: width * 0.03,
+    ...FONTS.fiveHundred,
+    color: COLORS.black,
+    lineHeight: height * 0.026,
+  },
+});
