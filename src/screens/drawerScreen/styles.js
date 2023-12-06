@@ -4,7 +4,7 @@ const {height, width} = Dimensions.get('window');
 export default StyleSheet.create({
   drawbg: {
     height: height,
-    width: width * 0.84,
+    // width: width * 0.84,
     resizeMode: 'stretch',
     paddingBottom: height * 0.1,
   },

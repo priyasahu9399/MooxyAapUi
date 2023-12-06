@@ -19,9 +19,7 @@ const {height, width} = Dimensions.get('window');
 const QuizQuestion = ({navigation}) => {
   const [activeAns, setactiveAns] = useState();
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-
   const ref = useRef(null);
-
   const goPreviousSlide = () => {
     const PreviousSlideIndex = currentSlideIndex - 1;
     if (PreviousSlideIndex != -1) {
@@ -30,7 +28,6 @@ const QuizQuestion = ({navigation}) => {
       setCurrentSlideIndex(PreviousSlideIndex);
     }
   };
-
   const updateCurrentSlideIndex = e => {
     const contentOffsetX = e.nativeEvent.contentOffset.x;
     const currentIndex = Math.round(contentOffsetX / width);
@@ -40,19 +37,34 @@ const QuizQuestion = ({navigation}) => {
   const goNextSlide = () => {
     const nextSlideIndex = currentSlideIndex + 1;
     if (nextSlideIndex != data.quizque.length) {
-      const offset = nextSlideIndex * width * .94;
+      const offset = nextSlideIndex * width * 0.94;
       ref?.current?.scrollToOffset({offset});
       setCurrentSlideIndex(nextSlideIndex);
     }
   };
 
+  const [questionSelect, setquestionSelect] = useState([]);
+
+  const handlequestionSelect = value => {
+    let arr = [...questionSelect];
+    let index = arr.findIndex(i => i?.que == value?.que);
+    if (index >= 0) {
+      arr.splice(index, 1, value);
+    } else {
+      arr.push(value);
+    }
+    setquestionSelect(arr);
+  };
+
+
+  console.log('questionSelect', questionSelect);
   return (
     <View style={styles.container}>
       <StatusBar backgroundColor={COLORS.primary} barStyle={'light-content'} />
       <View showsVerticalScrollIndicator={false} style={styles.innercontainer}>
         <View style={styles.roundbluebox}>
           <Text style={[styles.roundblueboxtext, {color: COLORS.white}]}>
-            Q 1
+            Q {currentSlideIndex + 1}
           </Text>
         </View>
         <View style={styles.row}>
@@ -99,21 +111,29 @@ const QuizQuestion = ({navigation}) => {
                 <View style={styles.checkrow}>
                   <Text style={styles.checktext}>{item?.que}</Text>
                 </View>
-                {item?.ans.map((item, index) => (
+                {item?.ans.map((items, i) => (
                   <TouchableOpacity
-                    key={index}
-                    onPress={() => setactiveAns(index)}
+                    key={i}
+                    onPress={() => {
+                      handlequestionSelect({que: item?.que, ans: items?.ans1});
+                    }}
                     activeOpacity={0.6}
                     style={[
                       styles.checkrow,
-                      activeAns == index && {backgroundColor: COLORS.primary},
+                      questionSelect.some( i => i?.que == item?.que && i?.ans == items?.ans1) && {
+                        backgroundColor: COLORS.primary,
+                      },
                     ]}>
                     <Text
                       style={[
                         styles.checktext,
-                        activeAns == index && {color: COLORS.white},
+                        questionSelect.some(
+                          i => i?.que == item?.que && i?.ans == items?.ans1,
+                        ) && {
+                          color: COLORS.white,
+                        },
                       ]}>
-                      {item?.ans1}
+                      {items?.ans1}
                     </Text>
                   </TouchableOpacity>
                 ))}

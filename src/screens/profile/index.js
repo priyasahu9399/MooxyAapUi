@@ -42,14 +42,10 @@ const Profile = ({navigation, token}) => {
         <ImageBackground
           source={images.profilebg}
           style={styles.ImageBackground}>
-          <TouchableOpacity
-            onPress={() => navigation.navigate('EditProfile')}
-            activeOpacity={0.6}>
-            <View style={styles.profilebox}>
-              <Image source={images.profile3} style={styles.profile} />
-            </View>
-            <Image source={icons.camera} style={styles.camera} />
-          </TouchableOpacity>
+          <View style={styles.profilebox}>
+            <Image source={images.profile3} style={styles.profile} />
+          </View>
+          <Image source={icons.camera} style={styles.camera} />
           <Text style={styles.heading}>Sonal Mehra</Text>
           <Text style={styles.edit}>sonalmehra@gmail.com</Text>
         </ImageBackground>

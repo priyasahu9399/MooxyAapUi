@@ -53,7 +53,7 @@ const ForgotPassword = ({navigation}) => {
         <ButtonCustom
           children="SEND"
           btnStyle={styles.btn}
-          onPress={() => navigation.navigate('Verification')}
+          onPress={() => navigation.navigate('NewPassword')}
         />
       </ScrollView>
     </View>

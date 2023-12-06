@@ -10,24 +10,33 @@ export default StyleSheet.create({
     backgroundColor: COLORS.white,
     width: width * 0.94,
     alignSelf: 'center',
+    flex: 1,
   },
   chatimage: {
     width: width * 0.44,
     height: height * 0.2,
     resizeMode: 'stretch',
-    marginVertical: height * 0.01,
-    alignSelf: 'flex-end',
     borderRadius: 24,
     borderTopRightRadius: 0,
+  },
+  rightimgbox: {
+    width: width * 0.44,
+    height: height * 0.2,
+    alignSelf: 'flex-end',
+    marginVertical: height * 0.01,
   },
   chatimageleft: {
     width: width * 0.44,
     height: height * 0.2,
     resizeMode: 'stretch',
-    marginVertical: height * 0.01,
-    alignSelf: 'flex-start',
     borderTopLeftRadius: 0,
     borderRadius: 24,
+  },
+  leftimgbox: {
+    width: width * 0.44,
+    height: height * 0.2,
+    alignSelf: 'flex-start',
+    marginVertical: height * 0.01,
   },
   lefttext: {
     fontSize: width * 0.034,
@@ -41,10 +50,6 @@ export default StyleSheet.create({
     fontSize: width * 0.034,
     ...FONTS.fourHundred,
     color: COLORS.black,
-    // bottom: 1,
-    // position: 'absolute',
-    // right: width * 0.03,
-    // borderWidth: 1,
   },
   leftBox: {
     borderWidth: 1,
@@ -55,7 +60,7 @@ export default StyleSheet.create({
     borderColor: COLORS.gray10,
     paddingHorizontal: width * 0.03,
     paddingVertical: width * 0.012,
-    marginTop: height * 0.01,
+    marginVertical: height * 0.01,
   },
   rightBox: {
     borderWidth: 1,
@@ -68,6 +73,7 @@ export default StyleSheet.create({
     marginTop: height * 0.01,
     alignSelf: 'flex-end',
     backgroundColor: 'rgba(241, 245, 255, 1)',
+    marginBottom: height * 0.006,
   },
   inputbox: {
     borderWidth: 1,
@@ -131,5 +137,21 @@ export default StyleSheet.create({
     borderRadius: 12,
     justifyContent: 'space-between',
     paddingHorizontal: width * 0.026,
+  },
+
+  // --------------------
+
+  rowdirextion: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-around',
+  },
+  sixIconBox: {
+    width: width * 0.9,
+    backgroundColor: COLORS.black,
+    paddingVertical: height * 0.02,
+  },
+  siximgtext: {
+    color: COLORS.white,
   },
 });

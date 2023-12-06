@@ -42,7 +42,7 @@ const DirectSolutionDiodeCategory = ({navigation , route}) => {
       {/* <Loader loading={loading} /> */}
       <StatusBar backgroundColor={COLORS.primary} barStyle={'light-content'} />
       <View>
-        <SearchBox disabled={true} />
+        <SearchBox disabled={true} placeholder="Search" />
         <View style={styles.headRow}>
           <TouchableOpacity onPress={() => setheadActive(1)}>
             <Text
@@ -53,7 +53,7 @@ const DirectSolutionDiodeCategory = ({navigation , route}) => {
                   color: COLORS.primary,
                 },
               ]}>
-              Direct Solution 
+              Direct Solution
             </Text>
           </TouchableOpacity>
           <TouchableOpacity onPress={() => setheadActive(2)}>

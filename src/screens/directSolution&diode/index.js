@@ -27,7 +27,7 @@ const DirectSolutionDiodeValue = ({navigation}) => {
       {/* <Loader loading={loading} /> */}
       <StatusBar backgroundColor={COLORS.primary} barStyle={'light-content'} />
       <View>
-        <SearchBox disabled={true} />
+        <SearchBox disabled={true} placeholder="Search" />
         <View style={styles.headRow}>
           <TouchableOpacity onPress={() => setheadActive(1)}>
             <Text

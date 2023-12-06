@@ -111,7 +111,7 @@ const ContactUs = ({navigation, token}) => {
                     placeholder="Message"
                     textAlignVertical="top"
                     multiline={true}
-                    numberOfLines={6}
+                    numberOfLines={8}
                     value={values.message}
                     errors={touched?.message && errors?.message}
                     onChangeText={handleChange('message')}

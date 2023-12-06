@@ -56,7 +56,7 @@ const FlashFilesDumpFiles = ({navigation, route}) => {
       {/* <Loader loading={loading} /> */}
       <StatusBar backgroundColor={COLORS.primary} barStyle={'light-content'} />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <SearchBox disabled={true} />
+        <SearchBox disabled={true} placeholder="Search" />
         {data.listFiles.map((item, index) => (
           <View style={styles.row}>
             <Image source={item?.icon} style={styles.fileicon} />

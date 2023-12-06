@@ -49,8 +49,8 @@ const InputBox = ({
           onChangeText={onChangeText}
           value={value}
           multiline={multiline}
-          textAlignVertical={textAlignVertical}
           numberOfLines={numberOfLines}
+          textAlignVertical={textAlignVertical}
           secureTextEntry={secureTextEntry && visible}
         />
         {img && <Image source={img} style={styles.image} />}
@@ -84,7 +84,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: COLORS.white,
-    height: SIZES.height * 0.06,
   },
   placeholdera: {
     ...FONTS.fourHundred,

@@ -4,6 +4,7 @@ import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
 import com.facebook.react.defaults.DefaultReactActivityDelegate;
+
 import android.os.Bundle; // here
 import com.facebook.react.ReactActivity;
 // react-native-splash-screen >= 0.3.1

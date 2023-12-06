@@ -20,7 +20,7 @@ import * as Progress from 'react-native-progress';
 import HomeSecondSlider from './../../component/slider/homesecondslider';
 import Modal from 'react-native-modal';
 import VideoCart from './../../component/video/videos';
-import Loader from "./../../component/modalLoading/index";
+import Loader from './../../component/modalLoading/index';
 
 const {height, width} = Dimensions.get('window');
 
@@ -57,6 +57,7 @@ const Home = ({navigation}) => {
       </View>
     ),
   });
+
   return (
     <View style={styles.container}>
       {/* <Loader loading={loading} /> */}
@@ -64,6 +65,7 @@ const Home = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={styles.innercontainer}>
+        
         <Text style={styles.heading}>Good Morning!</Text>
         <HomeSlider datalist={data.homesliderlist} />
         <Text style={[styles.heading, {marginTop: height * 0.012}]}>

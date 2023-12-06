@@ -6,7 +6,7 @@ import {
   Image,
   Dimensions,
   TouchableOpacity,
-  StatusBar,
+  StatusBar, 
   ScrollView,
   FlatList,
 } from 'react-native';
@@ -27,7 +27,7 @@ const Community = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={styles.innercontainer}>
-        <SearchBox disabled={true} />
+        <SearchBox disabled={true} placeholder="Search" />
 
         <View style={styles.row}>
           <View>

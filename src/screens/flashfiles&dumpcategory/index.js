@@ -47,7 +47,7 @@ const FlashFilesDumpCategory = ({navigation, route}) => {
       {/* <Loader loading={loading} /> */}
       <StatusBar backgroundColor={COLORS.primary} barStyle={'light-content'} />
       <ScrollView showsVerticalScrollIndicator={false}>
-        <SearchBox disabled={true} />
+        <SearchBox disabled={true} placeholder="Search" />
         {data.filelist2.map((item, index) => (
           <TouchableOpacity
             onPress={() => {

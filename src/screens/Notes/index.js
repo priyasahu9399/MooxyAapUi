@@ -23,7 +23,6 @@ const Notes = ({navigation}) => {
     <View style={styles.container}>
       {/* <Loader loading={loading} /> */}
       <StatusBar backgroundColor={COLORS.primary} barStyle={'light-content'} />
-
       <ScrollView
         style={styles.innercontainer}
         showsVerticalScrollIndicator={false}>

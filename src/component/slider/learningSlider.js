@@ -15,7 +15,7 @@ import {http2} from './../../services/api';
 
 const {width, height} = Dimensions.get('window');
 
-const LearningSlider = ({onPress, datalist, scrollimgstyle, source}) => {
+const LearningSlider = ({onPress, datalist,scrollBoxstyle,dotboxstyle, scrollimgstyle, source}) => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const ref = useRef(null);
   const useInterval = (callback, delay) => {
@@ -64,7 +64,10 @@ const LearningSlider = ({onPress, datalist, scrollimgstyle, source}) => {
         onMomentumScrollEnd={updateCurrentSlideIndex}
         ref={ref}
         renderItem={({item, index}) => (
-          <View key={index} onPress={onPress} style={styles.scrollBox}>
+          <View
+            key={index}
+            onPress={onPress}
+            style={[styles.scrollBox, scrollBoxstyle]}>
             <Image
               source={item?.image}
               style={[styles.scrollImage, scrollimgstyle]}
@@ -72,7 +75,7 @@ const LearningSlider = ({onPress, datalist, scrollimgstyle, source}) => {
           </View>
         )}
       />
-      <View style={styles.dotbox}>
+      <View style={[styles.dotbox, dotboxstyle]}>
         {datalist?.map((item, index) => (
           <View
             key={index}
@@ -93,7 +96,7 @@ const styles = StyleSheet.create({
     width: width,
     backgroundColor: COLORS.white,
     alignSelf: 'center',
-    marginTop: height * 0.01,
+    marginVertical: height * 0.015,
   },
   scrollImage: {
     width: width * 0.94,
@@ -106,10 +109,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
-    marginTop: height * 0.01,
-    marginBottom: height * 0.02,
     position: 'absolute',
-    bottom: width * -0.02,
+    bottom: width * 0.05,
     alignSelf: 'center',
   },
   dotstyle: {

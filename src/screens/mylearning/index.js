@@ -15,6 +15,7 @@ import styles from './styles';
 import {connect} from 'react-redux';
 import SearchBox from './../../component/InputText/search';
 import {YellowBtn} from './../../component/Button/index';
+import LearningSlider from './../../component/slider/learningSlider';
 
 const {height, width} = Dimensions.get('window');
 const SixBox = ({icon, title, onPress}) => {
@@ -49,8 +50,10 @@ const MyLearning = ({navigation}) => {
       <ScrollView
         showsVerticalScrollIndicator={false}
         style={styles.innercontainer}>
-        <SearchBox disabled={true} />
-
+        <SearchBox
+          disabled={true}
+          placeholder="Search for courses and educators"
+        />
         <View style={[styles.row, {marginBottom: height * 0.02}]}>
           <View>
             <Text style={styles.heading}>Excel Your Career </Text>
@@ -61,12 +64,11 @@ const MyLearning = ({navigation}) => {
             <YellowBtn
               children="VIEW COURSES"
               btnStyle={{width: width * 0.47}}
-              onPress={() => navigation.navigate('Course')}
+              onPress={() => navigation.navigate('ViewCourse')}
             />
           </View>
           <Image source={images.learn} style={styles.community} />
         </View>
-
         <View style={styles.row}>
           <SixBox
             title="Courses"
@@ -102,7 +104,12 @@ const MyLearning = ({navigation}) => {
             onPress={() => navigation.navigate('QuizStart')}
           />
         </View>
-        <Image source={images.learn1} style={styles.oneimg} />
+        <LearningSlider
+          datalist={data.learnslider}
+          scrollimgstyle={{
+            height: height * 0.23,
+          }}
+        />
         <View style={styles.cartborder}>
           <Text
             style={[
@@ -156,7 +163,6 @@ const MyLearning = ({navigation}) => {
             )}
           />
         </View>
-
         <VideoList
           title="Demo Course Videos"
           onPress={() => navigation.navigate('DemoCourseVideo')}
@@ -165,7 +171,6 @@ const MyLearning = ({navigation}) => {
           title="Videos"
           onPress={() => navigation.navigate('LearningVideo')}
         />
-
         <View style={styles.coursetypebox}>
           <Image source={images.refer} style={styles.referimg} />
           <View>

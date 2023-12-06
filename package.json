@@ -10,8 +10,10 @@
     "test": "jest"
   },
   "dependencies": {
+    "@giphy/react-native-sdk": "^3.2.1",
     "@react-native-async-storage/async-storage": "^1.19.4",
     "@react-native-community/clipboard": "^1.5.1",
+    "@react-native-community/viewpager": "^5.0.11",
     "@react-native-masked-view/masked-view": "^0.3.0",
     "@react-navigation/bottom-tabs": "^6.5.11",
     "@react-navigation/drawer": "^6.6.6",
@@ -29,8 +31,12 @@
     "react-native-date-picker": "^4.3.3",
     "react-native-document-picker": "^9.0.1",
     "react-native-element-dropdown": "^2.10.0",
+    "react-native-emoji-board": "^1.2.1",
+    "react-native-enhanced-popup-menu": "^0.7.0",
     "react-native-gesture-handler": "^2.13.4",
     "react-native-image-crop-picker": "^0.40.1",
+    "react-native-keyboard-listener": "^1.1.0",
+    "react-native-material-menu": "^2.0.0",
     "react-native-modal": "^13.0.1",
     "react-native-progress": "^5.0.1",
     "react-native-raw-bottom-sheet": "^2.2.0",

@@ -33,7 +33,7 @@ const SearchBox = ({
       style={[styles.searchbox, searchStyle]}>
       <TextInput
         editable={editable}
-        placeholder={'Search'}
+        placeholder={placeholder}
         style={[styles.searchinput]}
         placeholderTextColor={COLORS.gray40}
         onChangeText={onChangeText}

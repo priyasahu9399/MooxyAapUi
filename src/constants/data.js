@@ -31,8 +31,8 @@ const homesliderlist = [
 ];
 
 const learnslider = [
-  {id: 0, image: images.learn2},
-  {id: 1, image: images.learn1},
+  {id: 0, image: images.learn1},
+  {id: 1, image: images.learn2},
   {id: 2, image: images.home1},
 ];
 const categorylist = [
@@ -449,6 +449,18 @@ const chat = [
     img: images.green,
     direction: 'right',
   },
+  {
+    id: 4,
+    name: "Hi there! Of course, we'd be happy to help. Our institute offers a wide range of mobile training courses for both beginners and advanced learners. We cover various aspects of mobile technology, including app development, and mobile device management. What specific area are you interested in?",
+    time: '5.31 PM',
+    direction: 'left',
+  },
+  {
+    id: 5,
+    name: "Hi there! Of course, we'd be happy to help. Our institute offers a wide range of mobile training courses for both beginners and advanced learners. We cover various aspects of mobile technology, including app development, and mobile device management. What specific area are you interested in?",
+    time: '5.31 PM',
+    direction: 'left',
+  },
 ];
 const TransactionCartdata = [
   {
@@ -763,7 +775,7 @@ const quizque = [
   },
   {
     id: 2,
-    que: 'What is the full form of OLED ?',
+    que: 'What is the full form of OLEDS ?',
     ans: [
       {
         id: 0,
@@ -785,7 +797,7 @@ const quizque = [
   },
   {
     id: 3,
-    que: 'Tools essential for repairing a mobile phone?',
+    que: 'Tools essential for repairing a mobile?',
     ans: [
       {
         id: 0,

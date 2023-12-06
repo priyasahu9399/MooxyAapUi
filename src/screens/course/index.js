@@ -45,7 +45,7 @@ const Course = ({navigation}) => {
         </View>
       </View>
 
-      <SearchBox disabled={true} />
+      <SearchBox disabled={true} placeholder="Search" />
 
       <View style={styles.toprow}>
         <Text style={styles.heading}>Explore Courses</Text>

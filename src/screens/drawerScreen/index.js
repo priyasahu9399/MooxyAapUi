@@ -46,7 +46,7 @@ const DrawerScreen = ({navigation}) => {
       });
   };
   return (
-    <ScrollView style={{height: height}} showsVerticalScrollIndicator={false}>
+    <ScrollView style={{flex: 1}} showsVerticalScrollIndicator={false}>
       <ImageBackground source={images.drawbg} style={styles.drawbg}>
         <TouchableOpacity onPress={() => navigation?.closeDrawer()}>
           <Image source={icons.x} style={styles.cross} />
@@ -120,11 +120,7 @@ const DrawerScreen = ({navigation}) => {
           title="Privacy Policy"
           onPress={() => navigation.navigate('Privacy')}
         />
-        <DrawerList
-          icon={icons.share}
-          title="Share App"
-          onPress={share}
-        />
+        <DrawerList icon={icons.share} title="Share App" onPress={share} />
         <DrawerList
           icon={icons.starw}
           title="Rate Us"
